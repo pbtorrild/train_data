@@ -1,0 +1,9 @@
+<launch>
+  <!--Launch the camera-->
+  <include file="$(find train_data)/launch/cam.launch"/>
+  <!--Launch the data_trainer-->
+  <node pkg="train_data" type="run" name="run" output="screen">
+    <param name="pc_name" value="peter"/>
+    <param name="workspace_name" value="catkin_ws"/>
+  </node>
+</launch>
